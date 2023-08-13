@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="stylesheet" href="./style/main.css" />
+        <title>Interactive card details form</title>
+    </head>
+    <body>
+        <main class="main-container">
+            <section class="cards-img-section">
+                <div class="card-front">
+                    <img
+                        class="card-front__logo"
+                        src="./images/card-logo.svg"
+                        alt="card-logo"
+                    />
+                    <p class="card-front__number">0000 0000 0000 0000</p>
+                    <p class="card-front__name">Jane Appleseed</p>
+                    <p class="card-front__exp-date">00/00</p>
+                </div>
+                <div class="card-back">
+                    <p class="card-back__cvc">000</p>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <form class="form" autocomplete="off">
+                    <div class="form__group form__group-name">
+                        <label for="cardholder-name" class="form__label"
+                            >CARDHOLDER NAME</label
+                        >
+                        <input
+                            type="text"
+                            class="form__input"
+                            name="cardholder-name"
+                            id="cardholder-name"
+                            placeholder="e.g. Jane Appleseed"
+                        />
+                        <p class="form__error-msg hidden">
+                            Please enter a valid name
+                        </p>
+                    </div>
+                    <div class="form__group form__group-number">
+                        <label for="card-number" class="form__label"
+                            >CARD NUMBER</label
+                        >
+                        <input
+                            type="text"
+                            class="form__input"
+                            name="card-number"
+                            id="card-number"
+                            placeholder="e.g. 1234 5678 9123 0000"
+                        />
+                        <p class="form__error-msg hidden">
+                            Wrong format, numbers only
+                        </p>
+                    </div>
+                    <div class="form__group form__group-exp-date">
+                        <label for="exp-month" class="form__label"
+                            >EXP. DATE (MM/YY)</label
+                        >
+                        <div>
+                            <input
+                                type="text"
+                                class="form__input"
+                                name="exp-month"
+                                id="exp-month"
+                                placeholder="MM"
+                            />
+                            <p class="form__error-msg hidden">Can't be blank</p>
+                            <input
+                                type="text"
+                                class="form__input"
+                                name="exp-year"
+                                id="exp-year"
+                                placeholder="YY"
+                            />
+                            <p class="form__error-msg hidden">Can't be blank</p>
+                        </div>
+                    </div>
+                    <div class="form__group form__group-cvc">
+                        <label for="cvc" class="form__label">CVC</label>
+                        <input
+                            type="text"
+                            class="form__input"
+                            name="cvc"
+                            id="cvc"
+                            placeholder="e.g. 123"
+                        />
+                        <p class="form__error-msg hidden">
+                            Please enter a valid name
+                        </p>
+                    </div>
+                    <button class="form__group-btn-confirm">Confirm</button>
+                </form>
+
+                <!-- Completed state start -->
+                <div class="thank-you-msg hidden">
+                    <img src="./images/icon-complete.svg" alt="icon-complete" />
+                    <h2>Thank you!</h2>
+                    <p>We've added your card details</p>
+                    <button>Continue</button>
+                </div>
+            </section>
+
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by <a href="#">Oscar Mumm</a>.
+            </div>
+        </main>
+    </body>
+</html>
